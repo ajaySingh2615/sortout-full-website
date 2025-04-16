@@ -524,9 +524,8 @@
       updateSlide();
     </script>
 
-    <section class="logo-carousel-section">
+    <!-- <section class="logo-carousel-section">
       <div class="container">
-        <!-- Heading & Description -->
         <div class="carousel-text">
           <h2>Trusted by Leading Brands</h2>
           <p>
@@ -535,7 +534,6 @@
           </p>
         </div>
 
-        <!-- Scrolling Logos -->
         <div class="logo-carousel">
           <div class="logos">
             <img
@@ -589,7 +587,328 @@
           </div>
         </div>
       </div>
+    </section> -->
+
+    <!-- Our Partners Brands Section -->
+    <section class="our-partners-section py-5">
+      <div class="container">
+        <div class="section-title text-center mb-4">
+          <span class="partner-icon"><i class="fas fa-handshake"></i></span>
+          <h2>Our Trusted Partners</h2>
+          <p>We collaborate with industry leaders across banking, retail, technology and e-commerce</p>
+          <div class="title-underline"></div>
+        </div>
+        
+        <div class="partner-logos-container">
+          <div class="partner-logos">
+            <div class="logos-track logos-track-1">
+              <img src="/images/our-brands-logo/amazon.png" alt="Amazon" class="partner-logo">
+              <img src="/images/our-brands-logo/sbi-bank.png" alt="SBI Bank" class="partner-logo">
+              <img src="/images/our-brands-logo/flipkart.png" alt="Flipkart" class="partner-logo">
+              <img src="/images/our-brands-logo/paytm.png" alt="Paytm" class="partner-logo">
+              <img src="/images/our-brands-logo/hdfc.png" alt="HDFC Bank" class="partner-logo">
+              <img src="/images/our-brands-logo/ICICI.png" alt="ICICI Bank" class="partner-logo">
+              <img src="/images/our-brands-logo/bajaj.png" alt="Bajaj" class="partner-logo">
+              <img src="/images/our-brands-logo/Reliance-Retail.png" alt="Reliance Retail" class="partner-logo">
+              <img src="/images/our-brands-logo/nykaa.png" alt="Nykaa" class="partner-logo">
+              <img src="/images/our-brands-logo/big-basket.png" alt="Big Basket" class="partner-logo">
+              <img src="/images/our-brands-logo/google-pay.png" alt="Google Pay" class="partner-logo">
+            </div>
+            <div class="logos-track logos-track-1">
+              <img src="/images/our-brands-logo/amazon.png" alt="Amazon" class="partner-logo">
+              <img src="/images/our-brands-logo/sbi-bank.png" alt="SBI Bank" class="partner-logo">
+              <img src="/images/our-brands-logo/flipkart.png" alt="Flipkart" class="partner-logo">
+              <img src="/images/our-brands-logo/paytm.png" alt="Paytm" class="partner-logo">
+              <img src="/images/our-brands-logo/hdfc.png" alt="HDFC Bank" class="partner-logo">
+              <img src="/images/our-brands-logo/ICICI.png" alt="ICICI Bank" class="partner-logo">
+              <img src="/images/our-brands-logo/bajaj.png" alt="Bajaj" class="partner-logo">
+              <img src="/images/our-brands-logo/Reliance-Retail.png" alt="Reliance Retail" class="partner-logo">
+              <img src="/images/our-brands-logo/nykaa.png" alt="Nykaa" class="partner-logo">
+              <img src="/images/our-brands-logo/big-basket.png" alt="Big Basket" class="partner-logo">
+              <img src="/images/our-brands-logo/google-pay.png" alt="Google Pay" class="partner-logo">
+            </div>
+          </div>
+          
+          <div class="partner-logos mt-4">
+            <div class="logos-track logos-track-2">
+              <img src="/images/our-brands-logo/phone-pay.png" alt="Phone Pay" class="partner-logo">
+              <img src="/images/our-brands-logo/axis-bank.png" alt="Axis Bank" class="partner-logo">
+              <img src="/images/our-brands-logo/congnizant.png" alt="Cognizant" class="partner-logo">
+              <img src="/images/our-brands-logo/hcl.png" alt="HCL" class="partner-logo">
+              <img src="/images/our-brands-logo/ibm.png" alt="IBM" class="partner-logo">
+              <img src="/images/our-brands-logo/techMahindra.png" alt="Tech Mahindra" class="partner-logo">
+              <img src="/images/our-brands-logo/capmine.png" alt="Capmine" class="partner-logo">
+              <img src="/images/our-brands-logo/infoses.png" alt="Infosys" class="partner-logo">
+              <img src="/images/our-brands-logo/tata.png" alt="Tata" class="partner-logo">
+              <img src="/images/our-brands-logo/wiproLogo.png" alt="Wipro" class="partner-logo">
+            </div>
+            <div class="logos-track logos-track-2">
+              <img src="/images/our-brands-logo/phone-pay.png" alt="Phone Pay" class="partner-logo">
+              <img src="/images/our-brands-logo/axis-bank.png" alt="Axis Bank" class="partner-logo">
+              <img src="/images/our-brands-logo/congnizant.png" alt="Cognizant" class="partner-logo">
+              <img src="/images/our-brands-logo/hcl.png" alt="HCL" class="partner-logo">
+              <img src="/images/our-brands-logo/ibm.png" alt="IBM" class="partner-logo">
+              <img src="/images/our-brands-logo/techMahindra.png" alt="Tech Mahindra" class="partner-logo">
+              <img src="/images/our-brands-logo/capmine.png" alt="Capmine" class="partner-logo">
+              <img src="/images/our-brands-logo/infoses.png" alt="Infosys" class="partner-logo">
+              <img src="/images/our-brands-logo/tata.png" alt="Tata" class="partner-logo">
+              <img src="/images/our-brands-logo/wiproLogo.png" alt="Wipro" class="partner-logo">
+            </div>
+          </div>
+        </div>
+        
+        <div class="partner-corner partner-corner-top-left"></div>
+        <div class="partner-corner partner-corner-top-right"></div>
+        <div class="partner-corner partner-corner-bottom-left"></div>
+        <div class="partner-corner partner-corner-bottom-right"></div>
+      </div>
     </section>
+
+    <style>
+    .our-partners-section {
+      background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+      padding: 80px 0;
+      overflow: hidden;
+      position: relative;
+      border-radius: 10px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+      margin: 30px 0;
+    }
+
+    .our-partners-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23d10000' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      opacity: 0.5;
+      z-index: 0;
+    }
+
+    .partner-icon {
+      display: inline-block;
+      font-size: 2rem;
+      color: #d10000;
+      margin-bottom: 15px;
+    }
+
+    .our-partners-section h2 {
+      font-size: 2.8rem;
+      font-weight: 700;
+      color: #d10000;
+      margin-bottom: 15px;
+      position: relative;
+      display: inline-block;
+    }
+
+    .title-underline {
+      height: 3px;
+      width: 0;
+      background: linear-gradient(90deg, transparent, #d10000, transparent);
+      margin: 15px auto 30px;
+      transition: width 1s ease;
+    }
+
+    .section-title.animate .title-underline {
+      width: 150px;
+    }
+
+    .our-partners-section p {
+      color: #666;
+      font-size: 1.1rem;
+      margin-bottom: 40px;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .partner-logos-container {
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+      padding: 30px 0;
+      z-index: 1;
+    }
+
+    .partner-logos {
+      display: flex;
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .logos-track {
+      display: flex;
+      white-space: nowrap;
+      align-items: center;
+    }
+
+    .logos-track-1 {
+      animation: scroll 35s linear infinite;
+    }
+
+    .logos-track-2 {
+      animation: scroll-reverse 40s linear infinite;
+    }
+
+    .partner-logo {
+      height: 70px;
+      width: auto;
+      margin: 0 25px;
+      object-fit: contain;
+      filter: grayscale(0%);
+      transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+      transform: translateY(0);
+      box-shadow: 0 5px 15px rgba(0,0,0,0);
+      padding: 10px;
+      border-radius: 8px;
+    }
+
+    .partner-logo:hover {
+      filter: grayscale(100%);
+      transform: scale(1.15) translateY(-5px) rotate(2deg);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+      z-index: 10;
+    }
+
+    @keyframes scroll {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+
+    @keyframes scroll-reverse {
+      0% {
+        transform: translateX(-100%);
+      }
+      100% {
+        transform: translateX(0);
+      }
+    }
+
+    .partner-corner {
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      border-color: #d10000;
+      border-style: solid;
+      border-width: 0;
+      z-index: 2;
+    }
+
+    .partner-corner-top-left {
+      top: 20px;
+      left: 20px;
+      border-top-width: 3px;
+      border-left-width: 3px;
+      border-top-left-radius: 8px;
+    }
+
+    .partner-corner-top-right {
+      top: 20px;
+      right: 20px;
+      border-top-width: 3px;
+      border-right-width: 3px;
+      border-top-right-radius: 8px;
+    }
+
+    .partner-corner-bottom-left {
+      bottom: 20px;
+      left: 20px;
+      border-bottom-width: 3px;
+      border-left-width: 3px;
+      border-bottom-left-radius: 8px;
+    }
+
+    .partner-corner-bottom-right {
+      bottom: 20px;
+      right: 20px;
+      border-bottom-width: 3px;
+      border-right-width: 3px;
+      border-bottom-right-radius: 8px;
+    }
+
+    /* Add animation for logos */
+    .partner-logos:hover .logos-track {
+      animation-play-state: paused;
+    }
+
+    /* Create pulsing effect for random logos */
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+        box-shadow: 0 5px 15px rgba(0,0,0,0);
+      }
+      50% {
+        transform: scale(1.08);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+      }
+      100% {
+        transform: scale(1);
+        box-shadow: 0 5px 15px rgba(0,0,0,0);
+      }
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .our-partners-section {
+        padding: 50px 0;
+      }
+      
+      .our-partners-section h2 {
+        font-size: 2.2rem;
+      }
+      
+      .partner-logo {
+        height: 50px;
+        margin: 0 15px;
+      }
+      
+      .partner-corner {
+        width: 20px;
+        height: 20px;
+      }
+    }
+    </style>
+
+    <script>
+    // Animate title underline when scrolled into view
+    document.addEventListener('DOMContentLoaded', function() {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate');
+          }
+        });
+      }, { threshold: 0.3 });
+
+      const sectionTitle = document.querySelector('.our-partners-section .section-title');
+      if (sectionTitle) {
+        observer.observe(sectionTitle);
+      }
+      
+      // Add pulsing animation to random logos
+      const partnerLogos = document.querySelectorAll('.partner-logo');
+      if (partnerLogos.length > 0) {
+        setInterval(() => {
+          // Get random logo
+          const randomLogo = partnerLogos[Math.floor(Math.random() * partnerLogos.length)];
+          // Apply animation
+          randomLogo.style.animation = 'pulse 2s ease';
+          
+          // Remove animation after it's done
+          setTimeout(() => {
+            randomLogo.style.animation = '';
+          }, 2000);
+        }, 3000);
+      }
+    });
+    </script>
 
     <section id="about" class="about-us-section">
       <div class="container">
@@ -636,6 +955,7 @@
       </div>
     </section>
 
+    
     <section class="industries-section py-5">
       <div class="container text-center">
         <div class="section-title">
