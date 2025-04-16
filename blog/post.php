@@ -193,7 +193,7 @@ if ($needs_toc) {
         },
         "publisher": {
             "@type": "Organization",
-            "name": "SortOut Innovation",
+            "name": "Sortout Innovation",
             "logo": {
                 "@type": "ImageObject",
                 "url": "<?php echo htmlspecialchars('https://' . $_SERVER['HTTP_HOST'] . '/images/sortoutInnovation-icon/Sortout innovation.jpg'); ?>"
@@ -1097,7 +1097,7 @@ if ($needs_toc) {
         <a href="/" class="navbar-logo">
           <img
             src="/images/sortoutInnovation-icon/sortout-innovation-only-s.gif"
-            alt="SortOut Innovation"
+            alt="Sortout Innovation"
           />
         </a>
 
@@ -1329,7 +1329,7 @@ if ($needs_toc) {
                 <!-- Column 1: Company Info -->
                 <div class="col-lg-3 col-md-6">
                     <div class="footer-logo">
-                        <img src="/images/sortoutInnovation-icon/Sortout innovation.jpg" alt="SortOut Innovation" />
+                        <img src="/images/sortoutInnovation-icon/Sortout innovation.jpg" alt="Sortout Innovation" />
                         <p class="text-center">
                             Empowering businesses with top-notch solutions in digital, IT, and business services.
                         </p>
@@ -1402,7 +1402,7 @@ if ($needs_toc) {
 
             <!-- Copyright & Legal Links -->
             <div class="footer-bottom">
-                <p>&copy; 2025 SortOut Innovation. All Rights Reserved.</p>
+                <p>&copy; 2025 Sortout Innovation. All Rights Reserved.</p>
                 <ul>
                     <li><a href="/privacy-policy">Privacy Policy</a></li>
                     <li><a href="/terms">Terms & Conditions</a></li>
