@@ -2244,7 +2244,7 @@ document.addEventListener('DOMContentLoaded', function() {
             <!-- Column 1: Company Info -->
             <div class="lg:col-span-1">
                 <div class="flex flex-col items-center lg:items-start">
-                    <img src="/images/sortoutInnovation-icon/Sortout innovation.jpg" alt="SortOut Innovation" class="h-16 w-auto mb-4" />
+                    <img src="/images/sortoutInnovation-icon/Sortout innovation.jpg" alt="Sortout Innovation" class="h-16 w-auto mb-4" />
                     <p class="text-center lg:text-left text-gray-300 text-sm">
                         Empowering businesses with top-notch solutions in digital, IT,
                         and business services.
@@ -2327,7 +2327,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         <!-- Copyright & Legal Links -->
         <div class="mt-12 pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center">
-            <p class="text-gray-400 text-center md:text-left mb-4 md:mb-0">&copy; 2025 SortOut Innovation. All Rights Reserved.</p>
+            <p class="text-gray-400 text-center md:text-left mb-4 md:mb-0">&copy; 2025 Sortout Innovation. All Rights Reserved.</p>
             <ul class="flex space-x-6">
                 <li><a href="/privacy-policy" class="text-gray-400 hover:text-white transition duration-300">Privacy Policy</a></li>
                 <li><a href="/terms" class="text-gray-400 hover:text-white transition duration-300">Terms & Conditions</a></li>
