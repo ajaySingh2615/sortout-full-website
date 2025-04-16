@@ -1476,14 +1476,27 @@ document.addEventListener('DOMContentLoaded', function() {
 
             <!-- Profile Image -->
             <div class="form-group">
-                <label for="image" class="block text-sm font-medium text-gray-700">Profile Image</label>
-                <input type="file" id="image" name="image" accept="image/*" required class="mt-1 block w-full text-sm text-gray-500
-                    file:mr-4 file:py-2 file:px-4
-                    file:rounded-md file:border-0
-                    file:text-sm file:font-semibold
-                    file:bg-red-50 file:text-red-700
-                    hover:file:bg-red-100">
-                <p class="mt-1 text-sm text-gray-500">Please upload a portrait image with 9:16 aspect ratio (recommended size: 720x1280 pixels) for optimal display</p>
+                <label for="camera-trigger" class="block text-sm font-medium text-gray-700">Profile Image</label>
+                <div class="camera-container mt-2">
+                    <button type="button" id="camera-trigger" class="w-full bg-red-50 text-red-700 px-4 py-2 rounded-md font-semibold hover:bg-red-100 transition duration-300">
+                        <i class="fas fa-camera mr-2"></i>Open Camera
+                    </button>
+                    <div id="camera-preview" class="hidden mt-2">
+                        <video id="video" width="100%" autoplay playsinline class="rounded-md"></video>
+                        <button type="button" id="capture-btn" class="mt-2 w-full bg-red-500 text-white px-4 py-2 rounded-md hover:bg-red-600 transition duration-300">
+                            <i class="fas fa-camera mr-2"></i>Take Photo
+                        </button>
+                    </div>
+                    <canvas id="canvas" class="hidden"></canvas>
+                    <div id="captured-image-container" class="hidden mt-2">
+                        <img id="captured-image" class="w-full rounded-md" />
+                        <button type="button" id="retake-btn" class="mt-2 w-full bg-gray-200 text-gray-700 px-4 py-2 rounded-md hover:bg-gray-300 transition duration-300">
+                            Retake Photo
+                        </button>
+                    </div>
+                    <input type="hidden" id="image" name="image">
+                </div>
+                <p class="mt-1 text-sm text-gray-500">Please take a portrait photo with your camera (9:16 aspect ratio recommended)</p>
             </div>
 
             <!-- Submit Button -->
@@ -3634,6 +3647,97 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+</script>
+
+<script>
+    // Close modals with Escape key
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape') {
+            hideProfileModal();
+            hideClientForm();
+        }
+    });
+    
+    // Camera functionality for profile image
+    const cameraTrigger = document.getElementById('camera-trigger');
+    const cameraPreview = document.getElementById('camera-preview');
+    const video = document.getElementById('video');
+    const captureBtn = document.getElementById('capture-btn');
+    const canvas = document.getElementById('canvas');
+    const capturedImageContainer = document.getElementById('captured-image-container');
+    const capturedImage = document.getElementById('captured-image');
+    const retakeBtn = document.getElementById('retake-btn');
+    const imageInput = document.getElementById('image');
+    
+    let stream = null;
+    
+    // Function to start the camera
+    async function startCamera() {
+        try {
+            stream = await navigator.mediaDevices.getUserMedia({ 
+                video: { 
+                    facingMode: 'user',
+                    width: { ideal: 720 },
+                    height: { ideal: 1280 }
+                } 
+            });
+            video.srcObject = stream;
+            cameraTrigger.classList.add('hidden');
+            cameraPreview.classList.remove('hidden');
+        } catch (err) {
+            console.error('Error accessing camera:', err);
+            alert('Could not access camera. Please ensure you have granted camera permissions.');
+        }
+    }
+    
+    // Function to capture photo
+    function capturePhoto() {
+        const context = canvas.getContext('2d');
+        
+        // Set canvas dimensions to match video
+        canvas.width = video.videoWidth;
+        canvas.height = video.videoHeight;
+        
+        // Draw the video frame to the canvas
+        context.drawImage(video, 0, 0, canvas.width, canvas.height);
+        
+        // Convert canvas to data URL and set as image source
+        const dataUrl = canvas.toDataURL('image/jpeg');
+        capturedImage.src = dataUrl;
+        
+        // Store the data URL in the hidden input field
+        imageInput.value = dataUrl;
+        
+        // Stop the video stream
+        if (stream) {
+            stream.getTracks().forEach(track => track.stop());
+            stream = null;
+        }
+        
+        // Show captured image and hide video preview
+        cameraPreview.classList.add('hidden');
+        capturedImageContainer.classList.remove('hidden');
+    }
+    
+    // Function to retake photo
+    function retakePhoto() {
+        capturedImageContainer.classList.add('hidden');
+        startCamera(); // Restart camera
+    }
+    
+    // Event listeners for camera functionality
+    if (cameraTrigger) {
+        cameraTrigger.addEventListener('click', startCamera);
+    }
+    
+    if (captureBtn) {
+        captureBtn.addEventListener('click', capturePhoto);
+    }
+    
+    if (retakeBtn) {
+        retakeBtn.addEventListener('click', retakePhoto);
+    }
+    });
 </script>
 
 
