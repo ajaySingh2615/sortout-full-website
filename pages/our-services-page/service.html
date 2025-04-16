@@ -1,0 +1,1316 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="/images/sortoutInnovation-icon/sortout-innovation-only-s.gif"
+    />
+    <link rel="icon" type="image/png" href="/images/sortoutInnovation-icon/sortout-innovation-only-s.gif" />
+    <title>Services</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap JavaScript Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="/pages/our-services-page/services.css" />
+    <link rel="stylesheet" href="/CSS/floating-social-media.css" />
+   
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+<!-- Bootstrap Navbar with Enhanced Features -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+  <div class="container">
+      <!-- Logo with hover effect -->
+      <a class="navbar-brand position-relative" href="/">
+          <div class="logo-container">
+              <img src="/images/sortoutInnovation-icon/sortout-innovation-only-s.gif" alt="SortOut Innovation" height="45" class="main-logo">
+              <div class="logo-glow"></div>
+          </div>
+      </a>
+
+      <!-- Animated Mobile Toggle Button -->
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <div class="toggle-icon">
+              <span></span>
+              <span></span>
+              <span></span>
+          </div>
+      </button>
+
+      <!-- Enhanced Navigation Links -->
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav align-items-center">
+              <li class="nav-item">
+                  <a class="nav-link px-3" href="/">Home</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link px-3" href="/pages/about-page/about.html">About</a>
+              </li>
+              <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle px-3" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Career
+                  </a>
+                  <ul class="dropdown-menu animate slideIn">
+                      <li>
+                          <a class="dropdown-item" href="/employee-job/index.php">Employee Jobs</a>
+                      </li>
+                      <li>
+                          <a class="dropdown-item" href="/admin/artist-v2/public/index.php">Artist Jobs</a>
+                      </li>
+                  </ul>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link px-3" href="/modal_agency.php">Find Talent</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link px-3 active" href="/pages/our-services-page/service.html">Services</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link px-3" href="/pages/contact-page/contact-page.html">Contact</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link px-3" href="/blog/index.php">Blog</a>
+              </li>
+          </ul>
+      </div>
+  </div>
+</nav>
+
+<!-- Spacer for fixed navbar -->
+<!-- <div style="height: 76px;"></div> -->
+
+<style>
+/* Modern Navbar Styles with Enhanced Features */
+.navbar {
+  padding: 0.8rem 0;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  background: rgba(255, 255, 255, 0.98) !important;
+  backdrop-filter: blur(10px);
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Logo Container with Glow Effect */
+.logo-container {
+  position: relative;
+  display: inline-block;
+}
+
+.logo-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(209, 0, 0, 0.1) 0%, rgba(255, 255, 255, 0) 70%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.navbar-brand:hover .logo-glow {
+  opacity: 1;
+}
+
+/* Navigation Links */
+.nav-link {
+  font-weight: 400;
+  color: #2c3e50 !important;
+  position: relative;
+  transition: all 0.3s ease;
+  font-size: 15px;
+  letter-spacing: 0.3px;
+  padding: 0.5rem 1rem !important;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 50%;
+  background: linear-gradient(90deg, #d10000, #ff4b4b);
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+.nav-link:hover::after {
+  width: calc(100% - 2.4rem);
+}
+
+.nav-link:hover {
+  color: #d10000 !important;
+}
+
+/* Active Link Style */
+.nav-link.active {
+  color: #d10000 !important;
+  font-weight: 600;
+}
+
+.nav-link.active::after {
+  width: calc(100% - 2.4rem);
+  background: linear-gradient(90deg, #d10000, #ff4b4b);
+  height: 3px;
+}
+
+/* Enhanced Dropdown Styles */
+.dropdown-menu {
+  border: none;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  border-radius: 12px;
+  padding: 0.8rem 0.5rem;
+  margin-top: 0.5rem;
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(10px);
+}
+
+.dropdown-item {
+  padding: 0.8rem 1.2rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  color: #2c3e50;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.dropdown-item:hover {
+  background: linear-gradient(45deg, rgba(209, 0, 0, 0.05), rgba(255, 75, 75, 0.05));
+  color: #d10000;
+  transform: translateX(5px);
+}
+
+/* Animated Mobile Toggle Button */
+.toggle-icon {
+  width: 24px;
+  height: 20px;
+  position: relative;
+  cursor: pointer;
+}
+
+.toggle-icon span {
+  display: block;
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background: #2c3e50;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.toggle-icon span:first-child {
+  top: 0;
+}
+
+.toggle-icon span:nth-child(2) {
+  top: 9px;
+}
+
+.toggle-icon span:last-child {
+  top: 18px;
+}
+
+.navbar-toggler[aria-expanded="true"] .toggle-icon span:first-child {
+  transform: rotate(45deg);
+  top: 9px;
+}
+
+.navbar-toggler[aria-expanded="true"] .toggle-icon span:nth-child(2) {
+  opacity: 0;
+}
+
+.navbar-toggler[aria-expanded="true"] .toggle-icon span:last-child {
+  transform: rotate(-45deg);
+  top: 9px;
+}
+
+/* Mobile Styles */
+@media (max-width: 991px) {
+  .navbar-collapse {
+      background: rgba(255, 255, 255, 0.98);
+      backdrop-filter: blur(10px);
+      padding: 1rem;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      margin-top: 1rem;
+  }
+
+  .nav-link {
+      padding: 0.8rem 1.2rem !important;
+      border-radius: 8px;
+  }
+
+  .nav-link:hover {
+      background: linear-gradient(45deg, rgba(209, 0, 0, 0.05), rgba(255, 75, 75, 0.05));
+  }
+
+  .nav-link::after {
+      display: none;
+  }
+
+  .dropdown-menu {
+      box-shadow: none;
+      padding-left: 1rem;
+      background: transparent;
+  }
+
+  .dropdown-item:hover {
+      transform: none;
+  }
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const navbar = document.querySelector('.navbar');
+  let lastScroll = 0;
+
+  // Enhanced scroll behavior
+  window.addEventListener('scroll', () => {
+      const currentScroll = window.pageYOffset;
+      
+      if (currentScroll > 50) {
+          navbar.style.padding = "0.6rem 0";
+          navbar.style.boxShadow = "0 5px 30px rgba(0,0,0,0.08)";
+      } else {
+          navbar.style.padding = "0.8rem 0";
+          navbar.style.boxShadow = "none";
+      }
+
+      // Smooth hide/show on scroll
+      if (currentScroll > lastScroll && currentScroll > 100) {
+          navbar.style.transform = 'translateY(-100%)';
+      } else {
+          navbar.style.transform = 'translateY(0)';
+      }
+
+      lastScroll = currentScroll;
+  });
+
+  // Handle mobile menu toggle animation
+  const navbarToggler = document.querySelector('.navbar-toggler');
+  navbarToggler.addEventListener('click', function() {
+      const isExpanded = this.getAttribute('aria-expanded') === 'true';
+      this.setAttribute('aria-expanded', !isExpanded);
+  });
+});
+</script>
+
+
+    <!-- HERO SECTION -->
+    <section class="hero-section">
+      <div class="container">
+        <div class="row align-items-center">
+          <!-- Left Content -->
+          <div class="col-lg-6 col-md-12">
+            <h1 class="hero-title">
+              Empowering Your <span>Business</span> <br />With Expert Services
+            </h1>
+            <p class="hero-subtitle">
+              Your success is our priority. We deliver solutions tailored to
+              your needs.
+            </p>
+            <div class="hero-buttons">
+              <a href="#service" class="btn btn-primary">Explore Services</a>
+              <!-- <a href="https://wa.me/919818559036" class="btn btn-outline-light"
+                >Get in Touch</a
+              > -->
+            </div>
+          </div>
+          <!-- Right Image -->
+          <div class="col-lg-6 col-md-12">
+            <div class="hero-illustration">
+              <img
+                src="https://demo.bazatheme.com/wp-content/uploads/2021/09/vffvv.png"
+                alt="Hero Illustration"
+                class="hero-image"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Background Decorations -->
+      <div class="hero-bg">
+        <div class="circle-red"></div>
+        <div class="circle-white"></div>
+      </div>
+    </section>
+
+    <section id="about" class="who-we-are-section py-5">
+      <div class="container">
+        <div class="row align-items-center">
+          <!-- Left: Content -->
+          <div class="col-lg-6">
+            <h2 class="section-heading">Who We Are</h2>
+            <p class="section-content">
+              At SortOut Media, we are committed to delivering innovative and
+              customer-centric solutions that empower businesses to thrive. With
+              over a decade of experience, our team combines creativity,
+              technology, and strategy to achieve remarkable results for our
+              clients.
+            </p>
+            <ul class="key-stats">
+              <li><strong>10+ Years</strong> of Experience</li>
+              <li><strong>500+</strong> Happy Clients</li>
+              <li><strong>1,200+</strong> Successful Projects</li>
+              <li><strong>98%</strong> Customer Satisfaction Rate</li>
+            </ul>
+          </div>
+
+          <!-- Right: Image -->
+          <div class="col-lg-6 text-center">
+            <div class="image-wrapper">
+              <img
+                src="/images/services-imgs/CA/about-us-refactor.webp"
+                alt="Who We Are"
+                class="who-we-are-image"
+              />
+            </div>
+            <!-- Stats Below Image -->
+            <div class="image-stats">
+              <div class="stat-item">
+                <h3>10+</h3>
+                <p>Years in Business</p>
+              </div>
+              <div class="stat-item">
+                <h3>500+</h3>
+                <p>Happy Clients</p>
+              </div>
+              <div class="stat-item">
+                <h3>1,200+</h3>
+                <p>Projects Delivered</p>
+              </div>
+              <div class="stat-item">
+                <h3>98%</h3>
+                <p>Satisfaction Rate</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="service" class="elevated-services-section py-5">
+      <div class="container">
+        <!-- Section Heading -->
+        <div class="section-header text-center mb-5">
+          <h2 class="section-title">
+            Discover Our Full Range of <span>Services</span>
+          </h2>
+          <p class="section-description">
+            From branding to advanced IT solutions, our services are tailored to
+            elevate your business.
+          </p>
+        </div>
+
+        <!-- Services Row -->
+        <div class="row g-4">
+          <!-- Service Card 1 -->
+          <div class="col-lg-3 col-md-6">
+            <div class="service-card">
+              <div class="service-image-wrapper">
+                <a href="/pages/services/socialMediaInfluencers.html">
+                  <img
+                    src="/images/services-imgs/Social_media.png"
+                    alt="Digital Marketing Services"
+                    class="service-image"
+                  />
+                </a>
+                <div class="service-icon-overlay">
+                  <i class="fas fa-share-alt"></i>
+                </div>
+              </div>
+              <div class="service-content">
+                <h3 class="service-title">Digital Marketing Services</h3>
+                <p class="service-description">
+                  Boost your brand's presence and engagement across platforms.
+                </p>
+                <a
+                  href="/pages/services/socialMediaInfluencers.html"
+                  class="btn-view-more"
+                  >View More</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Service Card 11 -->
+          <div class="col-lg-3 col-md-6">
+            <div class="service-card">
+              <div class="service-image-wrapper">
+                <a href="/pages/services/live-streaming/liveStreaming.html">
+                  <img
+                    src="/images/services-imgs/live-streaming-logo.webp"
+                    alt="Web and App Development"
+                    class="service-image"
+                  />
+                  <div class="service-icon-overlay">
+                    <i class="fas fa-laptop-code"></i>
+                  </div>
+                </a>
+              </div>
+              <div class="service-content">
+                <h3 class="service-title">Live Streaming Service</h3>
+                <p class="service-description">
+                  Develops websites and apps to meet business needs with
+                  seamless functionality and modern design.
+                </p>
+                <a
+                  href="/pages/services/live-streaming/liveStreaming.html"
+                  class="btn-view-more"
+                  >View More</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Service Card 12 -->
+          <div class="col-lg-3 col-md-6">
+            <div class="service-card">
+              <div class="service-image-wrapper">
+                <img
+                  src="/images/services-imgs/infulener_s.png"
+                  alt="Find Talent"
+                  class="service-image"
+                />
+                <div class="service-icon-overlay">
+                  <i class="fas fa-users"></i>
+                </div>
+              </div>
+              <div class="service-content">
+                <h3 class="service-title">Find Talent</h3>
+                <p class="service-description">
+                  Helps businesses hire the right, skilled professionals for
+                  growth and success.
+                </p>
+                <a href="/pages/talent.page/talent.html" class="btn-view-more"
+                  >View More</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Service Card 2 -->
+          <div class="col-lg-3 col-md-6">
+            <div class="service-card">
+              <div class="service-image-wrapper">
+                <a href="/pages/services/itServices.html">
+                  <img
+                    src="/images/services-imgs/It_services.png"
+                    alt="IT Support"
+                    class="service-image"
+                  />
+                </a>
+                <div class="service-icon-overlay">
+                  <i class="fas fa-laptop-code"></i>
+                </div>
+              </div>
+              <div class="service-content">
+                <h3 class="service-title">Information Technology Support</h3>
+                <p class="service-description">
+                  Reliable tech support to keep your business running smoothly.
+                </p>
+                <a href="/pages/services/itServices.html" class="btn-view-more"
+                  >View More</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Service Card 3 -->
+          <div class="col-lg-3 col-md-6">
+            <div class="service-card">
+              <div class="service-image-wrapper">
+                <a href="/pages/services/caServices.html">
+                  <img
+                    src="/images/services-imgs/CA_s.png"
+                    alt="CA Services"
+                    alt="CA Services"
+                    class="service-image"
+                  />
+                </a>
+                <div class="service-icon-overlay">
+                  <i class="fas fa-calculator"></i>
+                </div>
+              </div>
+              <div class="service-content">
+                <h3 class="service-title">Chartered Accountant Services</h3>
+                <p class="service-description">
+                  Expert financial consulting to manage taxes and finances.
+                </p>
+                <a href="/pages/services/caServices.html" class="btn-view-more"
+                  >View More</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Service Card 4 -->
+          <div class="col-lg-3 col-md-6">
+            <div class="service-card">
+              <div class="service-image-wrapper">
+                <a href="/pages/services/hrServices.html">
+                  <img
+                    src="/images/services-imgs/HR_Solutions S.png"
+                    alt="HR Solutions"
+                    class="service-image"
+                  />
+                </a>
+                <div class="service-icon-overlay">
+                  <i class="fas fa-users"></i>
+                </div>
+              </div>
+              <div class="service-content">
+                <h3 class="service-title">Human Resources Solutions</h3>
+                <p class="service-description">
+                  Simplify employee recruitment and management.
+                </p>
+                <a href="/pages/services/hrServices.html" class="btn-view-more"
+                  >View More</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Service Card 5 -->
+          <div class="col-lg-3 col-md-6">
+            <div class="service-card">
+              <div class="service-image-wrapper">
+                <a href="/pages/services/courierServices.html">
+                  <img
+                    src="/images/services-imgs/courier_services.png"
+                    alt="Courier Services"
+                    class="service-image"
+                  />
+                </a>
+                <div class="service-icon-overlay">
+                  <i class="fas fa-truck"></i>
+                </div>
+              </div>
+              <div class="service-content">
+                <h3 class="service-title">Courier Services</h3>
+                <p class="service-description">
+                  Fast, reliable, secure, and highly efficient delivery of
+                  important packages.
+                </p>
+                <a
+                  href="/pages/services/courierServices.html"
+                  class="btn-view-more"
+                  >View More</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Service Card 6 -->
+          <div class="col-lg-3 col-md-6">
+            <div class="service-card">
+              <div class="service-image-wrapper">
+                <a href="/pages/services/shipping.html">
+                  <img
+                    src="/images/services-imgs/shipping_s.png"
+                    alt="Shipping and Fulfillment"
+                    class="service-image"
+                  />
+                </a>
+                <div class="service-icon-overlay">
+                  <i class="fas fa-box"></i>
+                </div>
+              </div>
+              <div class="service-content">
+                <h3 class="service-title">Shipping and Fulfillment Services</h3>
+                <p class="service-description">
+                  Handles packing and shipping of products to customers.
+                </p>
+                <a href="/pages/services/shipping.html" class="btn-view-more"
+                  >View More</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Service Card 7 -->
+          <div class="col-lg-3 col-md-6">
+            <div class="service-card">
+              <div class="service-image-wrapper">
+                <a href="/pages/services/stationeryServices.html">
+                  <img
+                    src="/images/services-imgs/stationery_services.webp"
+                    alt="Stationary Services"
+                    class="service-image"
+                  />
+                </a>
+                <div class="service-icon-overlay">
+                  <i class="fas fa-pencil-alt"></i>
+                </div>
+              </div>
+              <div class="service-content">
+                <h3 class="service-title">Stationery Services</h3>
+                <p class="service-description">
+                  Supplies essential office materials for smooth and efficient
+                  daily operations.
+                </p>
+                <a
+                  href="/pages/services/stationeryServices.html"
+                  class="btn-view-more"
+                  >View More</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Service Card 8 -->
+          <div class="col-lg-3 col-md-6">
+            <div class="service-card">
+              <div class="service-image-wrapper">
+                <a href="/pages/services/propertyServices.html">
+                  <img
+                    src="/images/services-imgs/property_services.png"
+                    alt="Real Estate and Property"
+                    class="service-image"
+                  />
+                </a>
+                <div class="service-icon-overlay">
+                  <i class="fas fa-building"></i>
+                </div>
+              </div>
+              <div class="service-content">
+                <h3 class="service-title">Real Estate and Property Services</h3>
+                <p class="service-description">
+                  Assists with buying, selling, and managing properties.
+                </p>
+                <a
+                  href="/pages/services/propertyServices.html"
+                  class="btn-view-more"
+                  >View More</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Service Card 9 -->
+          <div class="col-lg-3 col-md-6">
+            <div class="service-card">
+              <div class="service-image-wrapper">
+                <a href="/pages/services/event-managementServices.html">
+                  <img
+                    src="/images/services-imgs/Event_services.png"
+                    alt="Event Management"
+                    class="service-image"
+                  />
+                </a>
+                <div class="service-icon-overlay">
+                  <i class="fas fa-calendar-alt"></i>
+                </div>
+              </div>
+              <div class="service-content">
+                <h3 class="service-title">Event Management Services</h3>
+                <p class="service-description">
+                  Plans and executes seamless, memorable, and impactful events.
+                </p>
+                <a
+                  href="/pages/services/event-managementServices.html"
+                  class="btn-view-more"
+                  >View More</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Service Card 10 -->
+          <div class="col-lg-3 col-md-6">
+            <div class="service-card">
+              <div class="service-image-wrapper">
+                <a href="/pages/services/designAndCreative.html">
+                  <img
+                    src="/images/services-imgs/design_S.png"
+                    alt="Design and Creative"
+                    class="service-image"
+                  />
+                </a>
+                <div class="service-icon-overlay">
+                  <i class="fas fa-paint-brush"></i>
+                </div>
+              </div>
+              <div class="service-content">
+                <h3 class="service-title">Design and Creative Services</h3>
+                <p class="service-description">
+                  Offers creative solutions for branding and design.
+                </p>
+                <a
+                  href="/pages/services/designAndCreative.html"
+                  class="btn-view-more"
+                  >View More</a
+                >
+              </div>
+            </div>
+          </div>
+          <!-- Service Card 13 -->
+          <div class="col-lg-3 col-md-6">
+            <div class="service-card">
+              <div class="service-image-wrapper">
+                <a
+                  href="/pages/services/corporate_insurance_services/corporate_insurance_services.html"
+                >
+                  <img
+                    src="/images/services-imgs/insurance_services.webp"
+                    alt="Design and Creative"
+                    class="service-image"
+                  />
+                </a>
+                <div class="service-icon-overlay">
+                  <i class="fas fa-paint-brush"></i>
+                </div>
+              </div>
+              <div class="service-content">
+                <h3 class="service-title">Corporate Insurance Services</h3>
+                <p class="service-description">
+                  Protect Your Business with Comprehensive Corporate Insurance
+                </p>
+                <a
+                  href="/pages/services/corporate_insurance_services/corporate_insurance_services.html"
+                  class="btn-view-more"
+                  >View More</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="why-choose-us">
+      <div class="container">
+        <h2 class="section-heading">Why Choose Us?</h2>
+        <h3 class="section-subheading">
+          Empowering Businesses with Innovation & Quality
+        </h3>
+        <p class="section-description">
+          We don't just offer services – we create solutions that drive success.
+          Discover why businesses trust us for their digital and operational
+          needs.
+        </p>
+
+        <div class="timeline">
+          <!-- Step 1 -->
+          <div class="timeline-item">
+            <div class="timeline-icon"><i class="fas fa-award"></i></div>
+            <div class="timeline-content">
+              <h4>Years of Proven Experience</h4>
+              <p>
+                Decades of industry expertise delivering top-notch solutions.
+              </p>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="timeline-item">
+            <div class="timeline-icon"><i class="fas fa-cubes"></i></div>
+            <div class="timeline-content">
+              <h4>Comprehensive Service Range</h4>
+              <p>From design to logistics, we cover all business needs.</p>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="timeline-item">
+            <div class="timeline-icon"><i class="fas fa-rocket"></i></div>
+            <div class="timeline-content">
+              <h4>Cutting-Edge Technology</h4>
+              <p>Stay ahead with AI-driven innovation and automation.</p>
+            </div>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="timeline-item">
+            <div class="timeline-icon"><i class="fas fa-headset"></i></div>
+            <div class="timeline-content">
+              <h4>Dedicated Support Team</h4>
+              <p>24/7 assistance to ensure smooth operations.</p>
+            </div>
+          </div>
+
+          <!-- Step 5 -->
+          <div class="timeline-item">
+            <div class="timeline-icon"><i class="fas fa-user-cog"></i></div>
+            <div class="timeline-content">
+              <h4>Custom-Tailored Solutions</h4>
+              <p>We shape our services to fit your unique goals and needs.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="process-section">
+      <div class="container">
+        <h2 class="section-title">Our Streamlined Process</h2>
+        <p class="section-subtitle">
+          From idea to execution, we ensure seamless service every step of the
+          way.
+        </p>
+
+        <div class="process-steps">
+          <!-- Step 1 -->
+          <div class="process-item">
+            <div class="step-number">01</div>
+            <div class="step-icon">
+              <i class="fas fa-comments"></i>
+            </div>
+            <div class="step-content">
+              <h3>Understanding Your Needs</h3>
+              <p>
+                We begin by analyzing your requirements and crafting a tailored
+                strategy.
+              </p>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="process-item">
+            <div class="step-number">02</div>
+            <div class="step-icon">
+              <i class="fas fa-lightbulb"></i>
+            </div>
+            <div class="step-content">
+              <h3>Strategic Planning</h3>
+              <p>
+                Our team develops a structured plan, ensuring alignment with
+                your vision.
+              </p>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="process-item">
+            <div class="step-number">03</div>
+            <div class="step-icon">
+              <i class="fas fa-cogs"></i>
+            </div>
+            <div class="step-content">
+              <h3>Execution & Implementation</h3>
+              <p>
+                We bring the plan to life using innovative solutions and precise
+                execution.
+              </p>
+            </div>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="process-item">
+            <div class="step-number">04</div>
+            <div class="step-icon">
+              <i class="fas fa-chart-line"></i>
+            </div>
+            <div class="step-content">
+              <h3>Optimization & Review</h3>
+              <p>
+                We continuously analyze performance and optimize for better
+                results.
+              </p>
+            </div>
+          </div>
+
+          <!-- Step 5 -->
+          <div class="process-item">
+            <div class="step-number">05</div>
+            <div class="step-icon">
+              <i class="fas fa-check-circle"></i>
+            </div>
+            <div class="step-content">
+              <h3>Final Delivery & Support</h3>
+              <p>
+                We ensure a seamless delivery and provide post-service support.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonials-section">
+      <div class="container">
+        <h2 class="testimonials-title">What Our Clients Say</h2>
+        <p class="testimonials-subtitle">
+          Hear from our satisfied clients about their experience with us.
+        </p>
+
+        <div class="testimonials-slider">
+          <!-- Testimonial 1 -->
+          <div class="testimonial-item active">
+            <p class="testimonial-text">
+              "They created a stunning website and branding for our business.
+              The results were beyond our expectations!"
+            </p>
+            <h4 class="testimonial-author">— Sunny, CEO, Josh</h4>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div class="testimonial-item">
+            <p class="testimonial-text">
+              "Their designs helped us stand out in a competitive market. Highly
+              recommended!"
+            </p>
+            <h4 class="testimonial-author">
+              — Ali, Marketing Head, E-Commerce Co.
+            </h4>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div class="testimonial-item">
+            <p class="testimonial-text">
+              "From packaging to animations, they deliver excellence every
+              single time."
+            </p>
+            x
+            <h4 class="testimonial-author">— Ajay, Product Manager</h4>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq-section">
+      <div class="container">
+        <h2 class="faq-title">Frequently Asked Questions</h2>
+        <p class="faq-subtitle">
+          Find answers to common queries about our services.
+        </p>
+
+        <div class="faq-container">
+          <!-- FAQ Item 1 -->
+          <div class="faq-item">
+            <div class="faq-question">
+              <h4>What types of design services do you offer?</h4>
+              <i class="fas fa-plus toggle-icon"></i>
+            </div>
+            <div class="faq-answer">
+              <p>
+                We provide a wide range of services, including branding, graphic
+                design, web design, packaging, motion graphics, and more.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ Item 2 -->
+          <div class="faq-item">
+            <div class="faq-question">
+              <h4>Do you offer custom solutions?</h4>
+              <i class="fas fa-plus toggle-icon"></i>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Yes, every service is tailored to your unique needs and brand
+                identity.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ Item 3 -->
+          <div class="faq-item">
+            <div class="faq-question">
+              <h4>What is your typical turnaround time?</h4>
+              <i class="fas fa-plus toggle-icon"></i>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Our timelines depend on the project scope but are always
+                delivered on time with uncompromising quality.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ Item 4 -->
+          <div class="faq-item">
+            <div class="faq-question">
+              <h4>Can I request revisions?</h4>
+              <i class="fas fa-plus toggle-icon"></i>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Absolutely! We offer revisions to ensure the final product
+                exceeds your expectations.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="cta" class="cta-section">
+      <div class="container">
+        <div class="cta-content">
+          <h2 class="cta-title">Ready to Bring Your Vision to Life?</h2>
+          <p class="cta-text">
+            Let's create designs that set your brand apart. Connect with us
+            today to start your creative journey.
+          </p>
+          <div class="cta-buttons">
+            <a href="#service" class="btn btn-primary">Get Started Today</a>
+            <a
+              href="https://wa.me/919818559036"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-outline"
+              >Contact Us</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      document.querySelectorAll(".faq-item").forEach((item) => {
+        item.addEventListener("click", () => {
+          item.classList.toggle("active");
+        });
+      });
+    </script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const features = document.querySelectorAll(".key-features li");
+
+        window.addEventListener("scroll", () => {
+          let triggerBottom = window.innerHeight * 0.85;
+
+          features.forEach((feature) => {
+            let featureTop = feature.getBoundingClientRect().top;
+            if (featureTop < triggerBottom) {
+              feature.classList.add("fade-in");
+            }
+          });
+        });
+      });
+    </script>
+
+    <footer class="footer-section">
+      <div class="container">
+        <div class="row">
+          <!-- Column 1: Company Info -->
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-logo">
+              <img
+                src="/images/sortoutInnovation-icon/Sortout innovation.jpg"
+                alt="SortOut Innovation"
+              />
+              <p class="text-center">
+                Empowering businesses with top-notch solutions in digital, IT,
+                and business services.
+              </p>
+            </div>
+          </div>
+
+          <!-- Column 2: Quick Links -->
+          <div class="col-lg-2 col-md-6">
+            <h4>Quick Links</h4>
+            <ul class="footer-links">
+              <li><a href="/index.php">Home</a></li>
+              <li><a href="/pages/about-page/about.html">About Us</a></li>
+              <li>
+                <a href="/pages/contact-page/contact-page.html">Contact</a>
+              </li>
+              <li>
+                <a href="/pages/career.html">Careers</a>
+              </li>
+              <li>
+                <a href="/pages/our-services-page/service.html">Services</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Column 3: Our Services -->
+          <div class="col-lg-2 col-md-6">
+            <h4>Our Services</h4>
+            <ul class="footer-links">
+              <li>
+                <a href="/pages/services/socialMediaInfluencers.html"
+                  >Digital Marketing</a
+                >
+              </li>
+              <li><a href="/pages/services/itServices.html">IT Support</a></li>
+              <li><a href="/pages/services/caServices.html">CA Services</a></li>
+              <li><a href="/pages/services/hrServices.html">HR Services</a></li>
+              <li>
+                <a href="/pages/services/courierServices.html"
+                  >Courier Services</a
+                >
+              </li>
+              <li>
+                <a href="/pages/services/shipping.html"
+                  >Shipping & Fulfillment</a
+                >
+              </li>
+              <li>
+                <a href="/pages/services/stationeryServices.html"
+                  >Stationery Services</a
+                >
+              </li>
+              <li>
+                <a href="/pages/services/propertyServices.html"
+                  >Real Estate & Property</a
+                >
+              </li>
+              <li>
+                <a href="/pages/services/event-managementServices.html"
+                  >Event Management</a
+                >
+              </li>
+              <li>
+                <a href="/pages/services/designAndCreative.html"
+                  >Design & Creative</a
+                >
+              </li>
+              <li>
+                <a href="/pages/services/designAndCreative.html"
+                  >Web & App Development</a
+                >
+              </li>
+              <li><a href="/modal_agency.php">Find Talent</a></li>
+            </ul>
+          </div>
+
+          <!-- Column 4: Contact Info -->
+          <div class="col-lg-3 col-md-6">
+            <h4>Contact Us</h4>
+            <ul class="footer-links">
+              <li>
+                <i class="fas fa-phone"></i>
+                <a
+                  href="tel:+919818559036"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >+91 9818559036</a
+                >
+              </li>
+              <li>
+                <i class="fas fa-envelope"></i>
+                <a
+                  href="mailto:info@sortoutinnovation.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >info@sortoutinnovation.com</a
+                >
+              </li>
+              <li>
+                <i class="fas fa-map-marker-alt"></i> Spaze i-Tech Park,
+                Gurugram, India
+              </li>
+            </ul>
+          </div>
+
+          <!-- Column 5: Social Media -->
+          <div class="col-lg-2 col-md-6">
+            <h4>Follow Us</h4>
+            <div class="social-icons">
+              <a
+                href="https://www.facebook.com/profile.php?id=61556452066209"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><i class="fab fa-facebook"></i
+              ></a>
+              <a
+                href="https://youtu.be/tw-xk-Pb-zA?si=QMTwuvhEuTegpqDr"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><i class="fab fa-youtube"></i
+              ></a>
+              <a
+                href="https://www.linkedin.com/company/sortout-innovation/"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><i class="fab fa-linkedin"></i
+              ></a>
+              <a
+                href="https://www.instagram.com/sortout_innovation"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><i class="fab fa-instagram"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Copyright & Legal Links -->
+        <div class="footer-bottom">
+          <p>&copy; 2025 SortOut Innovation. All Rights Reserved.</p>
+          <ul>
+            <li><a href="/privacy-policy">Privacy Policy</a></li>
+            <li><a href="/terms">Terms & Conditions</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Floating Social Media Bar -->
+    <div class="floating-social-bar">
+      <a
+        href="https://www.facebook.com/profile.php?id=61556452066209"
+        target="_blank"
+        class="social-icon facebook"
+      >
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a
+        href="https://www.instagram.com/sortout_innovation"
+        target="_blank"
+        class="social-icon instagram"
+      >
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a
+        href="https://www.linkedin.com/company/sortout-innovation/"
+        target="_blank"
+        class="social-icon linkedin"
+      >
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+      <a
+        href="https://youtu.be/tw-xk-Pb-zA?si=QMTwuvhEuTegpqDr"
+        target="_blank"
+        class="social-icon youtube"
+      >
+        <i class="fab fa-youtube"></i>
+      </a>
+    </div>
+
+    <!-- Floating WhatsApp Button -->
+    <div class="floating-whatsapp">
+      <div class="whatsapp-button">
+        <a
+          class="what-a"
+          href="https://wa.me/919818559036"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i class="fab fa-whatsapp"></i>
+          <span class="whatsapp-text"> Contact Us</span></a
+        >
+      </div>
+    </div>
+  </body>
+</html>
+
+

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    />
+
+    <link rel="stylesheet" href="/demo.css" />
+  </head>
+  <body>
+    <!-- Pricing Section -->
+    <section class="pricing-section">
+      <div class="container">
+        <h2 class="pricing-title">Our Social Media Management Packages</h2>
+        <p class="pricing-subtext">
+          Choose the best plan to grow your brand on social media.
+        </p>
+
+        <div class="row">
+          <!-- Starter Package -->
+          <div class="col-lg-4 col-md-6">
+            <div class="pricing-card starter-package">
+              <h3>Starter Package</h3>
+              <p class="price">₹20,000 <span>/month</span></p>
+              <p class="package-desc">
+                For businesses looking to establish their social media presence.
+              </p>
+              <ul class="package-features">
+                <li>
+                  📌 <strong>Platforms Managed:</strong> 2 (Instagram &
+                  Facebook)
+                </li>
+                <li>🖼 <strong>Content Creation:</strong> 12 posts/month</li>
+                <li>
+                  💬 <strong>Community Management:</strong> Basic monitoring
+                </li>
+                <li>
+                  📊 <strong>Performance Report:</strong> Monthly insights
+                </li>
+                <li>📞 <strong>Support:</strong> Email & chat support</li>
+              </ul>
+              <div class="pricing-footer">
+                <a href="#" class="btn btn-primary-price">Get Started</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Growth Package -->
+          <div class="col-lg-4 col-md-6">
+            <div class="pricing-card growth-package">
+              <h3>
+                Growth Package <span class="decoy-tag">(Most Popular)</span>
+              </h3>
+              <p class="price">₹42,000 <span>/month</span></p>
+              <p class="package-desc">
+                A more robust package with additional engagement.
+              </p>
+              <ul class="package-features">
+                <li>
+                  📌 <strong>Platforms Managed:</strong> 3 (Instagram, Facebook,
+                  LinkedIn)
+                </li>
+                <li>🖼 <strong>Content Creation:</strong> 18–22 posts/month</li>
+                <li>
+                  💬 <strong>Community Management:</strong> Frequent engagement
+                </li>
+                <li>
+                  📢 <strong>Advertising:</strong> Basic ad campaign (1/month)
+                </li>
+                <li>
+                  📊 <strong>Performance Report:</strong> Advanced insights
+                </li>
+                <li>📞 <strong>Support:</strong> WhatsApp & email</li>
+              </ul>
+              <div class="pricing-footer">
+                <a href="#" class="btn btn-primary-price">Get Started</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Ultimate Package -->
+          <div class="col-lg-4">
+            <div class="pricing-card ultimate-package">
+              <h3>
+                Ultimate Package <span class="best-value">Best Value</span>
+              </h3>
+              <p class="price">₹45,000 <span>/month</span></p>
+              <p class="package-desc">
+                A full-service package with premium content & advertising.
+              </p>
+              <ul class="package-features">
+                <li>
+                  📌 <strong>Platforms Managed:</strong> 5 (Instagram, Facebook,
+                  LinkedIn, Twitter, YouTube)
+                </li>
+                <li>
+                  🖼 <strong>Content Creation:</strong> 25–30 high-quality
+                  posts/month
+                </li>
+                <li>
+                  💬 <strong>Community Management:</strong> 24/7 engagement &
+                  support
+                </li>
+                <li>
+                  📢 <strong>Advertising:</strong> Advanced strategy & A/B
+                  testing
+                </li>
+                <li>
+                  📊 <strong>Performance Report:</strong> Real-time analytics
+                </li>
+                <li>
+                  💼 <strong>Bonus:</strong> Influencer strategy & crisis
+                  management
+                </li>
+              </ul>
+              <div class="pricing-footer">
+                <a href="#" class="btn btn-primary-price">Get Started</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 🔹 Get Started Popup Modal (Placed at the END of the Pricing Section) -->
+      <div id="addOnModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2>Customize Your Package</h2>
+          <p>Select any additional services to enhance your package:</p>
+
+          <!-- Add-on Options -->
+          <form id="addOnForm">
+            <label
+              ><input
+                type="checkbox"
+                value="Social Media Script Writing (₹2–₹7 per word)"
+              />
+              Social Media Script Writing (₹2–₹7 per word)</label
+            >
+            <label
+              ><input
+                type="checkbox"
+                value="YouTube Thumbnail Design (₹500–₹1,000 per thumbnail)"
+              />
+              YouTube Thumbnail Design (₹500–₹1,000 per thumbnail)</label
+            >
+            <label
+              ><input
+                type="checkbox"
+                value="AI-Generated Product Photography (₹500–₹1,000 per product)"
+              />
+              AI-Generated Product Photography (₹500–₹1,000 per product)</label
+            >
+            <label
+              ><input type="checkbox" value="Content Repurposing (₹5,000)" />
+              Content Repurposing (₹5,000)</label
+            >
+            <label
+              ><input
+                type="checkbox"
+                value="LinkedIn Personal Branding Expert (₹30,000)"
+              />
+              LinkedIn Personal Branding Expert (₹30,000)</label
+            >
+          </form>
+
+          <!-- Proceed Button -->
+          <button id="whatsappBtn">Proceed to WhatsApp</button>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      // Open modal when "Get Started" is clicked
+      document.querySelectorAll(".btn-primary-price").forEach((button) => {
+        button.addEventListener("click", function (event) {
+          event.preventDefault();
+          document.getElementById("addOnModal").style.display = "block";
+
+          // Get the package name from the button's parent container
+          let packageName =
+            this.closest(".pricing-card").querySelector("h3").innerText;
+
+          // Store the selected package in a data attribute
+          document
+            .getElementById("addOnModal")
+            .setAttribute("data-package", packageName);
+        });
+      });
+
+      // Close modal when clicking on "×"
+      document.querySelector(".close").addEventListener("click", function () {
+        document.getElementById("addOnModal").style.display = "none";
+      });
+
+      // Proceed to WhatsApp
+      document
+        .getElementById("whatsappBtn")
+        .addEventListener("click", function () {
+          let selectedPackage = document
+            .getElementById("addOnModal")
+            .getAttribute("data-package");
+          let selectedServices = [];
+
+          // Get all checked services
+          document
+            .querySelectorAll("#addOnForm input[type='checkbox']:checked")
+            .forEach((checkbox) => {
+              selectedServices.push(checkbox.value);
+            });
+
+          // Format the message for WhatsApp
+          let message = `Hello! I'm interested in the ${selectedPackage}.`;
+
+          if (selectedServices.length > 0) {
+            message += `\n\nI would also like to add:\n - ${selectedServices.join(
+              "\n - "
+            )}`;
+          }
+
+          // Encode message for URL
+          let encodedMessage = encodeURIComponent(message);
+
+          // WhatsApp link (change phone number accordingly)
+          let whatsappURL = `https://wa.me/919876543210?text=${encodedMessage}`;
+
+          // Redirect to WhatsApp
+          window.location.href = whatsappURL;
+        });
+    </script>
+  </body>
+</html>
