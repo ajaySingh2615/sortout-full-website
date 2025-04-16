@@ -282,6 +282,9 @@ body {
   transition: transform 0.4s ease, box-shadow 0.4s ease;
   overflow: hidden;
   position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .service-card:hover {
@@ -293,15 +296,24 @@ body {
 .service-image-wrapper {
   position: relative;
   overflow: hidden;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f8f9fa;
+  padding: 15px;
 }
 
 .service-image {
   width: 100%;
+  height: 100%;
   transition: transform 0.4s ease;
+  object-fit: contain;
+  max-height: 170px;
 }
 
 .service-card:hover .service-image {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 /* Icon Overlay */
@@ -332,6 +344,10 @@ body {
 .service-content {
   padding: 20px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-between;
 }
 
 .service-title {
@@ -339,12 +355,21 @@ body {
   color: #333;
   font-weight: bold;
   margin-bottom: 10px;
+  min-height: 3.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .service-description {
   font-size: 1rem;
   color: #666;
   margin-bottom: 15px;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 60px;
 }
 
 /* Button */
@@ -359,6 +384,7 @@ body {
   text-transform: uppercase;
   border-radius: 30px;
   transition: background-color 0.3s ease, transform 0.3s ease;
+  margin-top: auto;
 }
 
 .btn-view-more:hover {
