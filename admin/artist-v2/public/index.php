@@ -354,188 +354,152 @@ usort($categories, function($a, $b) {
         </div>
     </nav>
 
-    <!-- Hero Section with Modern Illustration Design -->
-    <section class="hero-section py-5 position-relative overflow-hidden bg-gradient" style="background: linear-gradient(135deg, #ff3e3e 0%, #c50000 100%);">
-        <!-- Floating Elements -->
-        <div class="position-absolute top-0 start-0 d-none d-lg-block" style="transform: translate(-30%, -30%);">
-            <div class="bg-white opacity-10 rounded-circle" style="width: 400px; height: 400px;"></div>
-        </div>
-        <div class="position-absolute bottom-0 end-0 d-none d-lg-block">
-            <div class="bg-white opacity-10 rounded-circle" style="width: 300px; height: 300px;"></div>
-        </div>
-        <div class="position-absolute top-50 start-50 d-none d-xl-block" style="transform: translateX(-80%);">
-            <div class="bg-white opacity-5 rounded-circle" style="width: 200px; height: 200px;"></div>
-        </div>
-        
-        <div class="container py-4 py-md-5 position-relative hero-content">
-            <div class="row align-items-center">
-                <!-- Left Column: Text Content -->
-                <div class="col-lg-6 mb-5 mb-lg-0">
-                    <span class="badge bg-white text-danger fw-bold px-3 py-2 rounded-pill mb-3 animate__animated animate__fadeInDown">App Directory</span>
-                    <h1 class="hero-title fw-bold mb-3 animate__animated animate__fadeInUp">Discover <span class="text-highlight">Amazing</span> Apps</h1>
-                    <div class="content-divider my-4 animate__animated animate__fadeInUp animate__delay-1s"></div>
-                    <p class="hero-subtitle fw-light mb-4 animate__animated animate__fadeInUp animate__delay-1s">Explore our curated collection of the best apps across various categories, all in one place.</p>
-                    <div class="d-flex flex-wrap gap-3 mt-4 animate__animated animate__fadeInUp animate__delay-2s">
-                        <a href="#categories" class="btn btn-light btn-lg fw-bold px-4 py-2 shadow-sm rounded-pill">
-                            <i class="fas fa-search me-2"></i> Explore Apps
-                        </a>
-                        <a href="#popular-apps" class="btn btn-danger btn-lg px-4 py-2 rounded-pill">
-                            <i class="fas fa-fire me-2"></i> Popular Apps
-                        </a>
-                    </div>
+    <!-- Hero Section with Bootstrap Carousel -->
+    <div class="hero-wrapper">
+        <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            </div>
+            
+            <div class="carousel-inner">
+                <!-- Slide 1 -->
+                <div class="carousel-item active">
+                    <img src="/images/artist-page-banner/banner-artist-job-1.jpg" class="d-block w-100" alt="Artist Jobs">
                 </div>
-
-                <!-- Right Column: Illustration -->
-                <div class="col-lg-6 position-relative">
-                    <div class="position-relative">
-                        <!-- Main Illustration with floating app icons -->
-                        <div class="bg-white rounded-4 shadow-lg p-3 animate__animated animate__zoomIn">
-                            <!-- 
-                            RECOMMENDED IMAGE:
-                            1. Use an image showing devices with apps or app interfaces
-                            2. Recommended dimensions: 1200x800px (16:9 ratio)
-                            3. Placed at: ../../assets/img/apps/hero-image.jpg
-                            4. If no custom image, the default will show
-                            -->
-                            <img src="../../assets/img/apps/hero-image.webp" 
-                                 alt="App Directory" 
-                                 class="img-fluid rounded-4" 
-                                 onerror="this.src='../../assets/img/default-app.webp';">
-                            <div class="image-overlay"></div>
-                        </div>
-                        
-                        <!-- Floating App Icons -->
-                        <div class="position-absolute top-0 start-0 translate-middle animate__animated animate__fadeInTopLeft animate__delay-1s d-none d-md-block">
-                            <div class="bg-danger text-white rounded-circle shadow-lg d-flex align-items-center justify-content-center" style="width: 70px; height: 70px;">
-                                <i class="fas fa-camera fs-3"></i>
-                            </div>
-                        </div>
-                        <div class="position-absolute top-100 start-50 translate-middle animate__animated animate__fadeInBottomRight animate__delay-2s d-none d-md-block">
-                            <div class="bg-white text-danger rounded-circle shadow-lg d-flex align-items-center justify-content-center" style="width: 60px; height: 60px;">
-                                <i class="fas fa-music fs-3"></i>
-                            </div>
-                        </div>
-                        <div class="position-absolute top-50 start-100 translate-middle animate__animated animate__fadeInRight animate__delay-1s d-none d-md-block">
-                            <div class="bg-danger text-white rounded-circle shadow-lg d-flex align-items-center justify-content-center" style="width: 80px; height: 80px;">
-                                <i class="fas fa-gamepad fs-3"></i>
-                            </div>
-                        </div>
-                        <div class="position-absolute top-0 start-100 translate-middle animate__animated animate__fadeInTopRight animate__delay-3s d-none d-md-block">
-                            <div class="bg-white text-danger rounded-circle shadow-lg d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
-                                <i class="fas fa-shopping-cart fs-4"></i>
-                            </div>
-                        </div>
-                    </div>
+                
+                <!-- Slide 2 -->
+                <div class="carousel-item">
+                    <img src="/images/artist-page-banner/banner-artist-job-2.jpg" class="d-block w-100" alt="Talent Showcase">
+                </div>
+                
+                <!-- Slide 3 -->
+                <div class="carousel-item">
+                    <img src="/images/artist-page-banner/banner-artist-job-3.jpg" class="d-block w-100" alt="Creative Opportunity">
+                </div>
+                
+                <!-- Slide 4 -->
+                <div class="carousel-item">
+                    <img src="/images/artist-page-banner/banner-artist-job-4.jpg" class="d-block w-100" alt="App Directory">
                 </div>
             </div>
+            
+            <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
         </div>
-    </section>
+    </div>
 
-    <!-- Custom CSS for Hero Section -->
+    <!-- Hero & Carousel Styling -->
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
-    
-        .hero-section {
-            font-family: 'Poppins', sans-serif;
-            color: #fff;
-        }
-        
-        .hero-content {
-            position: relative;
-            z-index: 5;
-        }
-        
-        .hero-title {
-            font-size: 3.5rem;
-            letter-spacing: -0.5px;
-            line-height: 1.2;
-            color: #fff;
-            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
-        }
-        
-        .hero-subtitle {
-            font-size: 1.25rem;
-            line-height: 1.6;
-            color: #fff;
-            opacity: 0.95;
-            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-        }
-        
-        .text-highlight {
-            color: #ffe0e0;
-            position: relative;
-            z-index: 1;
-            font-weight: 700;
-        }
-        
-        .content-divider {
-            width: 80px;
-            height: 4px;
-            background: rgba(255, 255, 255, 0.8);
-            border-radius: 4px;
-        }
-        
-        .bg-gradient {
-            position: relative;
-        }
-        
-        .bg-gradient:before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
+        /* Hero Styling */
+        .hero-wrapper {
+            margin-top: 0;
             width: 100%;
-            height: 100%;
-            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4));
-            z-index: 1;
+            overflow: hidden;
         }
         
-        .image-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
+        #heroCarousel {
+            margin-bottom: 0;
+        }
+        
+        #heroCarousel .carousel-item {
+            height: auto;
+            max-height: none;
+        }
+        
+        #heroCarousel .carousel-item img {
             width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, rgba(255, 0, 0, 0.03) 0%, rgba(255, 0, 0, 0.08) 100%);
-            border-radius: 0.75rem;
-            pointer-events: none;
+            height: auto;
+            object-fit: contain;
+            max-height: 80vh;
+            object-position: center;
         }
         
-        .btn-danger {
+        /* Carousel controls */
+        #heroCarousel .carousel-control-prev,
+        #heroCarousel .carousel-control-next {
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            top: 50%;
+            transform: translateY(-50%);
+            opacity: 0.7;
+        }
+        
+        #heroCarousel .carousel-control-prev {
+            left: 20px;
+        }
+        
+        #heroCarousel .carousel-control-next {
+            right: 20px;
+        }
+        
+        #heroCarousel .carousel-indicators {
+            bottom: 20px;
+        }
+        
+        #heroCarousel .carousel-indicators button {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            margin: 0 5px;
+            background-color: rgba(255, 255, 255, 0.5);
+        }
+        
+        #heroCarousel .carousel-indicators button.active {
             background-color: #ff2020;
-            border-color: #ff2020;
+            transform: scale(1.2);
         }
         
-        .btn-danger:hover {
-            background-color: #e60000;
-            border-color: #e60000;
-        }
-        
-        /* Responsive adjustments for hero section */
+        /* Responsive adjustments */
         @media (max-width: 991px) {
-            .hero-title {
-                font-size: 2.75rem;
+            #heroCarousel .carousel-item img {
+                max-height: 60vh;
             }
         }
         
         @media (max-width: 767px) {
-            .hero-section .hero-title {
-                font-size: 2.25rem;
+            #heroCarousel .carousel-item img {
+                max-height: 50vh;
             }
-            .hero-section .hero-subtitle {
-                font-size: 1.1rem;
+            
+            #heroCarousel .carousel-control-prev,
+            #heroCarousel .carousel-control-next {
+                width: 40px;
+                height: 40px;
             }
-            .hero-section .btn {
-                width: 100%;
-                margin-bottom: 0.5rem;
-            }
-            .hero-section .container {
-                padding-top: 2rem !important;
-                padding-bottom: 2rem !important;
+        }
+        
+        @media (max-width: 480px) {
+            #heroCarousel .carousel-item img {
+                max-height: 40vh;
             }
         }
     </style>
 
+    <!-- Animation script -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const heroCarousel = document.getElementById('heroCarousel');
+        
+        // Initialize Bootstrap carousel with specific settings
+        var carousel = new bootstrap.Carousel(heroCarousel, {
+            interval: 5000,
+            wrap: true,
+            touch: true
+        });
+    });
+    </script>
+    
     <!-- Link Animate.css for animations -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     
