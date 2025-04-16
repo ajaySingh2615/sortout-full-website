@@ -593,7 +593,6 @@
     <section class="our-partners-section py-5">
       <div class="container">
         <div class="section-title text-center mb-4">
-          <span class="partner-icon"><i class="fas fa-handshake"></i></span>
           <h2>Our Trusted Partners</h2>
           <p>We collaborate with industry leaders across banking, retail, technology and e-commerce</p>
           <div class="title-underline"></div>
