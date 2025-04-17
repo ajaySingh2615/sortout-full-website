@@ -1476,26 +1476,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
             <!-- Profile Image -->
             <div class="form-group">
-                <label for="camera-trigger" class="block text-sm font-medium text-gray-700">Profile Image</label>
-                <div class="camera-container mt-2">
-                    <button type="button" id="camera-trigger" class="w-full bg-red-50 text-red-700 px-4 py-2 rounded-md font-semibold hover:bg-red-100 transition duration-300">
-                        <i class="fas fa-camera mr-2"></i>Open Camera
-                    </button>
-                    <div id="camera-preview" class="hidden mt-2">
-                        <video id="video" width="100%" autoplay playsinline class="rounded-md"></video>
-                        <button type="button" id="capture-btn" class="mt-2 w-full bg-red-500 text-white px-4 py-2 rounded-md hover:bg-red-600 transition duration-300">
-                            <i class="fas fa-camera mr-2"></i>Take Photo
-                        </button>
-                    </div>
-                    <canvas id="canvas" class="hidden"></canvas>
-                    <div id="captured-image-container" class="hidden mt-2">
-                        <img id="captured-image" class="w-full rounded-md" />
-                        <button type="button" id="retake-btn" class="mt-2 w-full bg-gray-200 text-gray-700 px-4 py-2 rounded-md hover:bg-gray-300 transition duration-300">
-                            Retake Photo
-                        </button>
-                    </div>
-                    <input type="hidden" id="image" name="image">
-                </div>
+                <label for="image" class="block text-sm font-medium text-gray-700">Profile Image</label>
+                <input type="file" id="image" name="image" accept="image/*" capture="camera" required class="mt-1 block w-full text-sm text-gray-500
+                    file:mr-4 file:py-2 file:px-4
+                    file:rounded-md file:border-0
+                    file:text-sm file:font-semibold
+                    file:bg-red-50 file:text-red-700
+                    hover:file:bg-red-100">
                 <p class="mt-1 text-sm text-gray-500">Please take a portrait photo with your camera (9:16 aspect ratio recommended)</p>
             </div>
 
@@ -3650,94 +3637,77 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 
 <script>
-    // Close modals with Escape key
-    document.addEventListener('keydown', function(event) {
-        if (event.key === 'Escape') {
-            hideProfileModal();
-            hideClientForm();
-        }
-    });
-    
-    // Camera functionality for profile image
-    const cameraTrigger = document.getElementById('camera-trigger');
-    const cameraPreview = document.getElementById('camera-preview');
-    const video = document.getElementById('video');
-    const captureBtn = document.getElementById('capture-btn');
-    const canvas = document.getElementById('canvas');
-    const capturedImageContainer = document.getElementById('captured-image-container');
-    const capturedImage = document.getElementById('captured-image');
-    const retakeBtn = document.getElementById('retake-btn');
+// Add this script at the end of the file, before the closing </body> tag
+document.addEventListener('DOMContentLoaded', function() {
+    // Add event listener to the image input
     const imageInput = document.getElementById('image');
-    
-    let stream = null;
-    
-    // Function to start the camera
-    async function startCamera() {
-        try {
-            stream = await navigator.mediaDevices.getUserMedia({ 
-                video: { 
-                    facingMode: 'user',
-                    width: { ideal: 720 },
-                    height: { ideal: 1280 }
-                } 
-            });
-            video.srcObject = stream;
-            cameraTrigger.classList.add('hidden');
-            cameraPreview.classList.remove('hidden');
-        } catch (err) {
-            console.error('Error accessing camera:', err);
-            alert('Could not access camera. Please ensure you have granted camera permissions.');
-        }
+    if (imageInput) {
+        imageInput.addEventListener('change', function(e) {
+            const file = e.target.files[0];
+            if (file) {
+                // Check if file is larger than 5MB
+                if (file.size > 5 * 1024 * 1024) {
+                    // Compress the image before upload
+                    compressImage(file, function(compressedFile) {
+                        // Replace the file in the input
+                        const dataTransfer = new DataTransfer();
+                        dataTransfer.items.add(compressedFile);
+                        imageInput.files = dataTransfer.files;
+                    });
+                }
+            }
+        });
     }
     
-    // Function to capture photo
-    function capturePhoto() {
-        const context = canvas.getContext('2d');
-        
-        // Set canvas dimensions to match video
-        canvas.width = video.videoWidth;
-        canvas.height = video.videoHeight;
-        
-        // Draw the video frame to the canvas
-        context.drawImage(video, 0, 0, canvas.width, canvas.height);
-        
-        // Convert canvas to data URL and set as image source
-        const dataUrl = canvas.toDataURL('image/jpeg');
-        capturedImage.src = dataUrl;
-        
-        // Store the data URL in the hidden input field
-        imageInput.value = dataUrl;
-        
-        // Stop the video stream
-        if (stream) {
-            stream.getTracks().forEach(track => track.stop());
-            stream = null;
-        }
-        
-        // Show captured image and hide video preview
-        cameraPreview.classList.add('hidden');
-        capturedImageContainer.classList.remove('hidden');
+    // Function to compress image
+    function compressImage(file, callback) {
+        const reader = new FileReader();
+        reader.readAsDataURL(file);
+        reader.onload = function(event) {
+            const img = new Image();
+            img.src = event.target.result;
+            img.onload = function() {
+                const canvas = document.createElement('canvas');
+                const ctx = canvas.getContext('2d');
+                
+                // Calculate new dimensions (maintain aspect ratio)
+                let width = img.width;
+                let height = img.height;
+                const MAX_WIDTH = 1280;
+                const MAX_HEIGHT = 1280;
+                
+                if (width > height) {
+                    if (width > MAX_WIDTH) {
+                        height *= MAX_WIDTH / width;
+                        width = MAX_WIDTH;
+                    }
+                } else {
+                    if (height > MAX_HEIGHT) {
+                        width *= MAX_HEIGHT / height;
+                        height = MAX_HEIGHT;
+                    }
+                }
+                
+                canvas.width = width;
+                canvas.height = height;
+                
+                // Draw image on canvas with new dimensions
+                ctx.drawImage(img, 0, 0, width, height);
+                
+                // Convert to Blob with reduced quality
+                canvas.toBlob(function(blob) {
+                    // Create a new file from the blob
+                    const compressedFile = new File([blob], file.name, {
+                        type: 'image/jpeg',
+                        lastModified: Date.now()
+                    });
+                    
+                    callback(compressedFile);
+                }, 'image/jpeg', 0.7); // Adjust quality (0.7 = 70% quality)
+            };
+        };
     }
-    
-    // Function to retake photo
-    function retakePhoto() {
-        capturedImageContainer.classList.add('hidden');
-        startCamera(); // Restart camera
-    }
-    
-    // Event listeners for camera functionality
-    if (cameraTrigger) {
-        cameraTrigger.addEventListener('click', startCamera);
-    }
-    
-    if (captureBtn) {
-        captureBtn.addEventListener('click', capturePhoto);
-    }
-    
-    if (retakeBtn) {
-        retakeBtn.addEventListener('click', retakePhoto);
-    }
-    });
+});
 </script>
 
 
